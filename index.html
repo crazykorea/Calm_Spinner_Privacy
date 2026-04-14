@@ -183,36 +183,28 @@
     <li>2 Common buffs (weight 4 each)</li>
     <li>1 Rare buff (weight 2)</li>
     <li>1 Legendary buff (weight 1)</li>
+    <li>1 Special buff (weight 0.5)</li>
   </ul>
-
+  
   <p>
-    Then the total weight is <code>4 + 4 + 2 + 1 = 11</code>, and the probabilities are:
+    Then the total weighted value is <code>2×4 + 1×2 + 1×1 + 1×0.5 = 11.5</code>.
   </p>
-  <ul>
-    <li>Each Common buff: <code>4 / 11</code> <span>(8 / 11 total for Common tier)</span></li>
-    <li>Rare buff: <code>2 / 11</code> <span>(2 / 11 total for Rare tier)</span></li>
-    <li>Legendary buff: <code>1 / 11</code> <span>(1 / 11 total for Legendary tier)</span></li>
-  </ul>
-
-  <h3>Skin Draw Probability Structure</h3>
+  
   <p>
-    Skin draws follow the same weighted structure as buff draws.
-    Skins are selected from the pool of <strong>remaining, not-yet-obtained skins</strong>,
-    and their actual appearance probability depends on the current remaining pool and its total weight.
+    The values below are shown as:
+    <code>count ratio in the remaining pool (weighted probability)</code>
   </p>
-
-  <p>Current weight values:</p>
+  
   <ul>
-    <li>Common: <strong>4</strong></li>
-    <li>Higher/Common-advanced tier: <strong>3</strong></li>
-    <li>Rare: <strong>2</strong></li>
-    <li>Legendary: <strong>1</strong></li>
-    <li>Special: <strong>0.5</strong></li>
+    <li>Common tier: <code>2 / 5 (8 / 11.5)</code></li>
+    <li>Rare tier: <code>1 / 5 (2 / 11.5)</code></li>
+    <li>Legendary tier: <code>1 / 5 (1 / 11.5)</code></li>
+    <li>Special tier: <code>1 / 5 (0.5 / 11.5)</code></li>
   </ul>
-
+  
   <p>
     Because both buff draws and skin draws depend on the current remaining candidate pool,
-    the exact probability of any individual item may change as the player obtains more items.
+    the exact weighted probability of each item changes as more items are obtained.
   </p>
 </body>
 </html>
